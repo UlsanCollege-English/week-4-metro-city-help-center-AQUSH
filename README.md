@@ -1,41 +1,39 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KuuIFSwK)
-# Weekly Coding #3 — Metro City Help Center
-
-## Summary
-This homework uses one connected story to practice stack and queue behavior in Python.
-
-Metro City Help Center needs a small support system for recent staff actions, waiting citizens, request-note checks, and service-line processing.
-
-## How to run
-```bash
-pytest -q
-```
-
 ## Complexity
+
 ### `ActionStack.pop`
-- Time:
-- Why:
+- Time: O(1)
+- Why: Removing the last element from a Python list is constant time because it does not require shifting elements.
+
+---
 
 ### `RequestQueue.dequeue`
-- Time:
-- Why:
+- Time: O(1)
+- Why: `collections.deque.popleft()` removes the first element in constant time without shifting the rest.
+
+---
 
 ### `is_note_balanced`
-- Time:
-- Why:
+- Time: O(n)
+- Why: We iterate through the string once, and each character is processed in constant time using a stack.
+
+---
 
 ### `process_request_line`
-- Time:
-- Why:
+- Time: O(n)
+- Why: Each citizen is added (enqueue) and removed (dequeue) exactly once, so total operations are proportional to n.
+
+---
 
 ## Edge-case checklist
-- [ ] empty action stack
-- [ ] empty request queue
-- [ ] empty string for `is_note_balanced`
-- [ ] note with no brackets
-- [ ] empty citizen list
+- [x] empty action stack  
+- [x] empty request queue  
+- [x] empty string for `is_note_balanced`  
+- [x] note with no brackets  
+- [x] empty citizen list  
+
+---
 
 ## Assistance & sources
-- AI used? (Y/N):
-- What it helped with:
-- Other sources:
+- AI used? (Y)
+- What it helped with: Understanding stack and queue implementation, debugging, and explaining time complexity.
+- Other sources: Python documentation (collections.deque)
